@@ -85,6 +85,12 @@ användaren själv. Se `src/lib/matspar-handoff.ts` för koden och
 Hela kedjan (URL-generering → bokmärkets CSRF-hantering → verkligt ifylld
 varukorg) har testats mot matspar.se:s riktiga API under utvecklingen.
 
+**Postnummer:** Matspar visar sin egen "välj leveransområde"-ruta varje gång
+tills ett postnummer bekräftats för sessionen (deras `has_chosen`-flagga).
+Bokmärket sätter därför postnumret (om ifyllt i Matkassen, sparat i
+localStorage) via `POST /zipcode` innan varukorgen fylls – verifierat att det
+håller i sig i efterföljande besök inom samma webbläsarsession.
+
 ## Struktur
 
 | Fil | Innehåll |
