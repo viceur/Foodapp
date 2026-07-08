@@ -42,8 +42,15 @@ export async function resolveCart(recipes: Recipe[], portions: number): Promise<
       continue;
     }
     const product = await provider.productForIngredient(key, item.name);
-    const quantity =
-      product && product.packUnit === item.unit ? Math.max(1, Math.ceil(item.amount / product.packSize)) : 1;
+    // Ingredienser i "st" (lök, citron, morot...) räknas som ett paket per styck,
+    // oavsett om butiken själv väger produkten i gram (t.ex. "Gullök i knippe 250g").
+    const quantity = !product
+      ? 1
+      : item.unit === "st"
+        ? Math.max(1, Math.ceil(item.amount))
+        : product.packUnit === item.unit
+          ? Math.max(1, Math.ceil(item.amount / product.packSize))
+          : 1;
     lines.push({
       ingredientKey: key,
       ingredientName: item.name,

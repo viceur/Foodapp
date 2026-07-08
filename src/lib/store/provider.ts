@@ -1,15 +1,22 @@
 import type { Product } from "@/lib/types";
 import { productForIngredient, searchCatalog } from "@/data/catalog";
+import { MATSPAR_PRODUCTS } from "@/data/matspar-snapshot";
 
 /**
  * Abstraktion över "butiken" som varukorgen byggs mot.
  *
- * - `mock`   – inbyggd katalog (default). Fungerar alltid, realistiska priser.
- * - `matspar` – experimentell klient mot Matspars inofficiella API. Matspar har
- *   inget publikt API, så endpoint och svarformat kan ändras när som helst.
- *   Vid fel faller vi alltid tillbaka på mock-katalogen.
+ * - `matspar` (default) – riktiga produkter och priser hämtade från matspar.se.
+ *   Matspar har inget publikt/dokumenterat API – priserna kommer från en
+ *   ögonblicksbild (`src/data/matspar-snapshot.ts`) som genereras av
+ *   `npm run fetch:matspar`. Snapshotet läser produktdata som Matspars egna
+ *   kategorisidor bäddar in server-side (`window.__PAGEDATA__`). Detta är
+ *   medvetet INTE en livefråga per request: Matspar publicerar ingen sådan
+ *   endpoint, och att gissa oss fram till en dold sådan vid varje sidladdning
+ *   vore både opålitligt och otrevligt mot deras servrar.
+ * - `mock` – handskriven katalog som alltid finns kvar som säkerhetsnät för
+ *   ingredienser snapshotet saknar.
  *
- * Välj provider med env-variabeln STORE_PROVIDER=matspar|mock.
+ * Välj provider med env-variabeln STORE_PROVIDER=mock|matspar (default matspar).
  */
 export interface StoreProvider {
   readonly name: "mock" | "matspar";
@@ -27,84 +34,26 @@ const mockProvider: StoreProvider = {
   },
 };
 
-/** Bas-URL kan pekas om via env om Matspar flyttar sitt API. */
-const MATSPAR_BASE = process.env.MATSPAR_API_BASE ?? "https://api.matspar.se";
-const MATSPAR_TIMEOUT_MS = 5000;
-
-interface MatsparHit {
-  id?: number | string;
-  name?: string;
-  title?: string;
-  brand?: string;
-  manufacturer?: string;
-  price?: number;
-  current_price?: number;
-  amount?: number;
-  unit?: string;
-  category?: string;
-}
-
-function parseMatsparHit(hit: MatsparHit): Product | null {
-  const name = hit.name ?? hit.title;
-  const price = hit.price ?? hit.current_price;
-  if (!name || typeof price !== "number") return null;
-  const unit = hit.unit === "ml" || hit.unit === "l" ? "ml" : hit.unit === "kg" || hit.unit === "g" ? "g" : "st";
-  const rawAmount = typeof hit.amount === "number" && hit.amount > 0 ? hit.amount : 1;
-  const packSize = hit.unit === "kg" || hit.unit === "l" ? rawAmount * 1000 : rawAmount;
-  return {
-    id: `matspar-${hit.id ?? name}`,
-    name,
-    brand: hit.brand ?? hit.manufacturer ?? "Matspar",
-    packSize,
-    packUnit: unit,
-    price,
-    category: hit.category ?? "Övrigt",
-    ingredientKeys: [],
-    source: "matspar",
-  };
-}
-
-async function matsparSearch(query: string): Promise<Product[]> {
-  const res = await fetch(`${MATSPAR_BASE}/search?query=${encodeURIComponent(query)}`, {
-    headers: { accept: "application/json" },
-    signal: AbortSignal.timeout(MATSPAR_TIMEOUT_MS),
-    // Produktdata ändras sällan under en session
-    next: { revalidate: 3600 },
-  });
-  if (!res.ok) throw new Error(`Matspar svarade ${res.status}`);
-  const body: unknown = await res.json();
-  const hits: MatsparHit[] = Array.isArray(body)
-    ? (body as MatsparHit[])
-    : Array.isArray((body as { products?: MatsparHit[] }).products)
-      ? (body as { products: MatsparHit[] }).products
-      : Array.isArray((body as { hits?: MatsparHit[] }).hits)
-        ? (body as { hits: MatsparHit[] }).hits
-        : [];
-  return hits.map(parseMatsparHit).filter((prod): prod is Product => prod !== null);
+const matsparByKey = new Map<string, Product>();
+for (const product of MATSPAR_PRODUCTS) {
+  for (const key of product.ingredientKeys) matsparByKey.set(key, product);
 }
 
 const matsparProvider: StoreProvider = {
   name: "matspar",
   async searchProducts(query) {
-    try {
-      const hits = await matsparSearch(query);
-      if (hits.length > 0) return hits;
-    } catch {
-      // Faller tillbaka på mock nedan
-    }
-    return mockProvider.searchProducts(query);
+    const q = query.trim().toLowerCase();
+    if (!q) return [];
+    const hits = MATSPAR_PRODUCTS.filter(
+      (p) => p.name.toLowerCase().includes(q) || p.brand.toLowerCase().includes(q),
+    );
+    return hits.length > 0 ? hits : mockProvider.searchProducts(query);
   },
   async productForIngredient(key, displayName) {
-    try {
-      const hits = await matsparSearch(displayName);
-      if (hits.length > 0) return { ...hits[0], ingredientKeys: [key] };
-    } catch {
-      // Faller tillbaka på mock nedan
-    }
-    return mockProvider.productForIngredient(key, displayName);
+    return matsparByKey.get(key) ?? mockProvider.productForIngredient(key, displayName);
   },
 };
 
 export function getStoreProvider(): StoreProvider {
-  return process.env.STORE_PROVIDER === "matspar" ? matsparProvider : mockProvider;
+  return process.env.STORE_PROVIDER === "mock" ? mockProvider : matsparProvider;
 }

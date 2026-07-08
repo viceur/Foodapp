@@ -7,6 +7,7 @@
  */
 import { RECIPES } from "../src/data/recipes";
 import { CATALOG, productForIngredient } from "../src/data/catalog";
+import { MATSPAR_PRODUCTS, MATSPAR_SNAPSHOT_DATE } from "../src/data/matspar-snapshot";
 
 let errors = 0;
 
@@ -44,8 +45,20 @@ for (const product of CATALOG) {
   productIds.add(product.id);
 }
 
+const matsparKeys = new Set(MATSPAR_PRODUCTS.flatMap((p) => p.ingredientKeys));
+let missingFromMatspar = 0;
+for (const recipe of RECIPES) {
+  for (const ing of recipe.ingredients) {
+    if (ing.pantry) continue;
+    if (!matsparKeys.has(ing.key)) missingFromMatspar++;
+  }
+}
+
 if (errors > 0) {
   console.error(`\n${errors} fel hittades.`);
   process.exit(1);
 }
 console.log(`OK: ${RECIPES.length} recept och ${CATALOG.length} produkter är konsistenta.`);
+console.log(
+  `Matspar-snapshot (${MATSPAR_SNAPSHOT_DATE}): ${MATSPAR_PRODUCTS.length} produkter, ${missingFromMatspar} ingrediensrader saknar Matspar-match (faller tillbaka på mock).`,
+);

@@ -41,6 +41,8 @@ export interface Product {
   ingredientKeys: string[];
   /** Varifrån produkten kommer: "mock" eller "matspar" */
   source: "mock" | "matspar";
+  /** Länk till produkten på matspar.se, om tillgänglig */
+  url?: string;
 }
 
 /** En rad i varukorgen: en ingrediens matchad mot en produkt */

@@ -50,7 +50,7 @@ export default function RootLayout({
         </header>
         <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-8">{children}</main>
         <footer className="border-t border-stone-200 py-6 text-center text-xs text-stone-500">
-          Matkassen – bygg din egen matkasse. Priser från inbyggd demokatalog.
+          Matkassen – bygg din egen matkasse. Produkter & priser från matspar.se.
         </footer>
       </body>
     </html>

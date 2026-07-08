@@ -25,29 +25,43 @@ npm run dev        # http://localhost:3000
 npm run check:data # validerar att recept och katalog hänger ihop
 ```
 
-## Butiksdata: mock vs. Matspar
+## Butiksdata: Matspar (default) vs. mock
 
 Varukorgen byggs mot en `StoreProvider` (`src/lib/store/provider.ts`):
 
-- **`mock`** (default) – inbyggd katalog med ~70 svenska matvaror och
-  realistiska priser (`src/data/catalog.ts`). Fungerar alltid.
-- **`matspar`** (experimentell) – klient mot Matspars *inofficiella* API.
-  Matspar har inget publikt API, så endpoint/format kan ändras när som helst;
-  vid fel faller appen automatiskt tillbaka på mock-katalogen.
+- **`matspar`** (default) – riktiga produkter, märken och priser från
+  matspar.se, med länk vidare till produktsidan. Matspar har inget publikt
+  API, så datan kommer från `src/data/matspar-snapshot.ts` – en genererad
+  ögonblicksbild, inte en live-fråga per request (det finns ingen stabil
+  dold endpoint att fråga, och att gissa oss fram vid varje sidladdning vore
+  opålitligt och otrevligt mot Matspars servrar). Kör `npm run fetch:matspar`
+  för att uppdatera priserna (tar ~1 minut, gör ~70 sidhämtningar mot
+  matspar.se).
+- **`mock`** – handskriven katalog (`src/data/catalog.ts`), används som
+  säkerhetsnät för enstaka ingredienser som saknas i snapshotet.
 
 ```bash
-STORE_PROVIDER=matspar npm run dev
-# ev. annan endpoint: MATSPAR_API_BASE=https://api.matspar.se
+STORE_PROVIDER=mock npm run dev   # tvinga fram mock-katalogen
+npm run fetch:matspar             # uppdatera Matspar-snapshotet
 ```
+
+**Känd begränsning:** matchningen mellan ingrediens och Matspar-produkt görs
+per kategori + nyckelord (se `scripts/fetch-matspar.mjs`), inte en riktig
+textsökning. De flesta träffar är exakta (t.ex. "Nötfärs", "Torskfilé MSC"),
+men enstaka kan bli lite fel om Matspars kategorier är breda – just nu gäller
+det `falafel`, som inte hittade ett eget falafelprodukt i sin kategori och
+föll tillbaka på en annan vegetarisk produkt.
 
 ## Struktur
 
 | Fil | Innehåll |
 | --- | --- |
 | `src/data/recipes.ts` | Receptbanken (30 recept, mängder i g/ml/st för 4 port) |
-| `src/data/catalog.ts` | Butikskatalogen (mock-produkter med priser) |
+| `src/data/catalog.ts` | Mock-katalogen (säkerhetsnät) |
+| `src/data/matspar-snapshot.ts` | Genererad ögonblicksbild av riktiga Matspar-produkter |
+| `scripts/fetch-matspar.mjs` | Hämtar & genererar Matspar-snapshotet |
 | `src/lib/cart.ts` | Slår ihop ingredienser → produkter → förpackningar |
-| `src/lib/store/provider.ts` | Provider-abstraktionen (mock/matspar) |
+| `src/lib/store/provider.ts` | Provider-abstraktionen (matspar/mock) |
 | `src/app/api/cart/resolve` | POST: recept-id:n + portioner → varukorg |
 | `src/app/api/products/search` | GET: fritextsök i butiken |
 | `src/components/RecipePicker.tsx` | 5 kort, reroll, val (localStorage) |

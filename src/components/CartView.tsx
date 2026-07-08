@@ -206,7 +206,20 @@ export default function CartView() {
                     <li key={line.ingredientKey} className="flex items-center gap-3 px-4 py-3">
                       <div className="min-w-0 flex-1">
                         <p className="truncate font-medium">
-                          {line.product ? line.product.name : line.ingredientName}
+                          {line.product?.url ? (
+                            <a
+                              href={line.product.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="hover:underline"
+                            >
+                              {line.product.name} ↗
+                            </a>
+                          ) : line.product ? (
+                            line.product.name
+                          ) : (
+                            line.ingredientName
+                          )}
                         </p>
                         <p className="truncate text-xs text-stone-500">
                           {line.product && (
@@ -293,8 +306,8 @@ export default function CartView() {
             </div>
             <p className="mt-2 text-xs text-stone-400">
               {cart.provider === "matspar"
-                ? "Priser hämtade via Matspar."
-                : "Priser från inbyggd demokatalog – koppla på Matspar via STORE_PROVIDER=matspar."}
+                ? "Riktiga produkter & priser från matspar.se (uppdateras med jämna mellanrum, inte live)."
+                : "Priser från inbyggd demokatalog."}
             </p>
           </section>
         </>
