@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { ResolvedCart } from "@/lib/types";
 import { RECIPE_MAP } from "@/data/recipes";
 import { formatAmount, formatPrice } from "@/lib/format";
+import MatsparHandoff from "@/components/MatsparHandoff";
 
 const SELECTED_KEY = "matkassen:selected";
 const PORTION_CHOICES = [2, 4, 6, 8];
@@ -79,6 +80,14 @@ export default function CartView() {
         const qty = quantities[line.ingredientKey] ?? line.quantity;
         return sum + (line.product ? line.product.price * qty : 0);
       }, 0),
+    [activeLines, quantities],
+  );
+
+  const handoffItems = useMemo(
+    () =>
+      activeLines
+        .filter((l) => l.product)
+        .map((l) => ({ product: l.product!, qty: quantities[l.ingredientKey] ?? l.quantity })),
     [activeLines, quantities],
   );
 
@@ -287,6 +296,8 @@ export default function CartView() {
               </ul>
             </section>
           )}
+
+          {cart.provider === "matspar" && <MatsparHandoff items={handoffItems} />}
 
           <section className="sticky bottom-0 rounded-2xl border border-stone-200 bg-white p-4 shadow-lg">
             <div className="flex flex-wrap items-center justify-between gap-3">
