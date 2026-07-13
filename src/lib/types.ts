@@ -20,7 +20,9 @@ export interface Recipe {
   /** Tillagningstid i minuter */
   time: number;
   tags: string[];
-  /** Emoji som "bild" + gradientfärger för kortet */
+  /** Sökväg till rättbild i public/, t.ex. "/recipes/tacos.jpg" */
+  image: string;
+  /** Emoji + gradientfärger, används som fallback om bilden inte laddas */
   emoji: string;
   gradient: [string, string];
   ingredients: Ingredient[];
@@ -59,10 +61,21 @@ export interface CartLine {
   quantity: number;
 }
 
+/** Skafferivara – de flesta har dem hemma, men kan läggas till i korgen vid behov. */
+export interface PantryItem {
+  key: string;
+  name: string;
+  amount: number;
+  unit: BaseUnit;
+  /** Vilka recept som använder varan */
+  recipeIds: string[];
+  /** Matchad butiksprodukt om användaren vill lägga till den i korgen */
+  product: Product | null;
+}
+
 export interface ResolvedCart {
   lines: CartLine[];
-  /** Skafferivaror listas separat – de flesta har dem hemma */
-  pantryItems: { name: string; amount: number; unit: BaseUnit }[];
+  pantryItems: PantryItem[];
   totalPrice: number;
   provider: "mock" | "matspar";
 }

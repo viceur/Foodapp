@@ -6,19 +6,23 @@ ingredienser direkt i en varukorg, som på Matspar eller ICA:s webbhandel.
 
 ## Flöde
 
-1. **Veckans fem förslag** – fem slumpade recept ur en bank med 30 svenska
-   vardagsfavoriter (4 portioner som bas).
+1. **Veckans fem förslag** – fem slumpade recept (som fem kort med riktiga
+   rättbilder) ur en bank med svenska vardagsfavoriter (4 portioner som bas).
 2. **🎲 Byt ut** – gillar du inte ett förslag rullas ett nytt fram; nyligen
    visade recept undviks tills banken är genombläddrad.
 3. **Välj** de recept du vill laga och gå till **varukorgen**.
 4. Ingredienserna slås ihop över recepten, matchas mot butiksprodukter och
-   antalet förpackningar beräknas. Skafferivaror (salt, olja, kryddor…) listas
-   separat under "kolla att du har hemma".
-5. Justera portioner (2/4/6/8) och antal, se totalpris och kopiera
-   inköpslistan.
-6. **Skicka till Matspar** – fyller din riktiga Matspar-varukorg, redo för
-   deras vanliga utcheckning mot ICA, Coop, Willys m.fl. Se avsnittet nedan
-   för hur och varför det är byggt som ett bokmärke.
+   antalet förpackningar beräknas. Varorna grupperas **per rätt** (eller per
+   kategori – välj själv). Skafferivaror (salt, olja, kryddor…) ligger som en
+   liten aside "Har du hemma?" och kan läggas till i korgen vid behov.
+5. Justera portioner (2/4/6/8) och antal, töm korgen eller kopiera listan.
+6. **Skicka till Matspar** (primär knapp) – fyller din riktiga Matspar-varukorg,
+   redo för deras vanliga utcheckning mot ICA, Coop, Willys m.fl. Se avsnittet
+   nedan för hur och varför det är byggt som ett bokmärke.
+
+Rättbilderna ligger i `public/recipes/` och hämtas från [TheMealDB](https://www.themealdb.com/)
+(fri bilddatabas). Varje recept mappas till en passande rätt; se
+`scripts/`-historiken för hur de valdes.
 
 ## Kom igång
 

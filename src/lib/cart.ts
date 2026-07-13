@@ -38,7 +38,17 @@ export async function resolveCart(recipes: Recipe[], portions: number): Promise<
 
   for (const [key, item] of merged) {
     if (item.pantry) {
-      pantryItems.push({ name: item.name, amount: Math.round(item.amount), unit: item.unit });
+      // Skafferivaror listas separat, men vi matchar ändå en produkt så att
+      // användaren kan lägga till dem i korgen om de behöver köpa dem.
+      const pantryProduct = await provider.productForIngredient(key, item.name);
+      pantryItems.push({
+        key,
+        name: item.name,
+        amount: Math.round(item.amount),
+        unit: item.unit,
+        recipeIds: item.recipeIds,
+        product: pantryProduct,
+      });
       continue;
     }
     const product = await provider.productForIngredient(key, item.name);

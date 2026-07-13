@@ -2,7 +2,7 @@
 // Källa: matspar.se (kategorisidornas inbäddade produktdata). Inget officiellt API.
 import type { Product } from "@/lib/types";
 
-export const MATSPAR_SNAPSHOT_DATE = "2026-07-08";
+export const MATSPAR_SNAPSHOT_DATE = "2026-07-13";
 
 export const MATSPAR_PRODUCTS: Product[] = [
   {
@@ -34,18 +34,18 @@ export const MATSPAR_PRODUCTS: Product[] = [
     "url": "https://www.matspar.se/produkt/salsicciafars-500g-ica-1"
   },
   {
-    "id": "matspar-275037",
-    "name": "Kyckling Lårfilé",
-    "brand": "Lönneberga",
-    "packSize": 630,
+    "id": "matspar-158802",
+    "name": "Kycklingfilé Fryst",
+    "brand": "Lindströms",
+    "packSize": 900,
     "packUnit": "g",
-    "price": 95.5,
+    "price": 93.65,
     "category": "Kött & Fågel",
     "ingredientKeys": [
       "kycklingfile"
     ],
     "source": "matspar",
-    "url": "https://www.matspar.se/produkt/kyckling-larfile-630g-lonneberga"
+    "url": "https://www.matspar.se/produkt/kycklingfile-fryst-900g-lindstroms"
   },
   {
     "id": "matspar-13071",
@@ -132,18 +132,18 @@ export const MATSPAR_PRODUCTS: Product[] = [
     "url": "https://www.matspar.se/produkt/torskfile-msc-300g-ica-gott-liv"
   },
   {
-    "id": "matspar-182064",
-    "name": "Räkor Kedjepack 4-p",
-    "brand": "Royal Greenland",
-    "packSize": 400,
+    "id": "matspar-17810",
+    "name": "Räkor Skalade",
+    "brand": "Änglamark",
+    "packSize": 300,
     "packUnit": "g",
-    "price": 86.97,
+    "price": 88.02,
     "category": "Fisk & Skaldjur",
     "ingredientKeys": [
       "rakor"
     ],
     "source": "matspar",
-    "url": "https://www.matspar.se/produkt/rakor-kedjepack-msc-400g-royal-greenland"
+    "url": "https://www.matspar.se/produkt/rakor-skalade-300-gr-coop-anglamark"
   },
   {
     "id": "matspar-153531",
@@ -188,32 +188,32 @@ export const MATSPAR_PRODUCTS: Product[] = [
     "url": "https://www.matspar.se/produkt/creme-fraiche-laktosfri-32-2dl-arla"
   },
   {
-    "id": "matspar-110724",
-    "name": "Naturell Lättyoghurt 0.5%",
+    "id": "matspar-110726",
+    "name": "Naturell Yoghurt 3%",
     "brand": "Skånemejerier",
     "packSize": 1000,
-    "packUnit": "g",
+    "packUnit": "ml",
     "price": 21.95,
     "category": "Mejeri",
     "ingredientKeys": [
       "matyoghurt"
     ],
     "source": "matspar",
-    "url": "https://www.matspar.se/produkt/naturell-lattyoghurt-1kg-skanemejerier"
+    "url": "https://www.matspar.se/produkt/naturell-yoghurt-1l-skanemejerier"
   },
   {
-    "id": "matspar-170456",
-    "name": "Ägg Frigående 10-p M/L",
-    "brand": "Coop",
+    "id": "matspar-503031",
+    "name": "Hållbart val ägg frig inne",
+    "brand": "Stjärnägg",
     "packSize": 10,
     "packUnit": "st",
-    "price": 38.73,
+    "price": 37.81,
     "category": "Mejeri",
     "ingredientKeys": [
       "agg"
     ],
     "source": "matspar",
-    "url": "https://www.matspar.se/produkt/agg-frig-ute-10p-ml-630g-coop"
+    "url": "https://www.matspar.se/produkt/hallbart-val-agg-frig-inne-10st-stjarnagg"
   },
   {
     "id": "matspar-292150",
@@ -244,8 +244,8 @@ export const MATSPAR_PRODUCTS: Product[] = [
     "url": "https://www.matspar.se/produkt/parmesanost-parmigiano-reggiano-22-manader-lagrad-200g-zeta"
   },
   {
-    "id": "matspar-5168",
-    "name": "Herrgård Mild Skivad 28%",
+    "id": "matspar-5167",
+    "name": "Präst Mellanlagrad Skivad 31%",
     "brand": "Arla Ko®",
     "packSize": 150,
     "packUnit": "g",
@@ -255,7 +255,7 @@ export const MATSPAR_PRODUCTS: Product[] = [
       "cheddarost"
     ],
     "source": "matspar",
-    "url": "https://www.matspar.se/produkt/herrgard-mild-skivad-28-150g-arla-ko"
+    "url": "https://www.matspar.se/produkt/prast-mellanlagrad-skivad-31-150g-arla-ko"
   },
   {
     "id": "matspar-214311",
@@ -314,32 +314,32 @@ export const MATSPAR_PRODUCTS: Product[] = [
     "url": "https://www.matspar.se/produkt/smor-ns-500g-grado-mejeri"
   },
   {
-    "id": "matspar-332480",
-    "name": "Gullök i knippe",
+    "id": "matspar-173241",
+    "name": "Lök i Knippe 1-p",
     "brand": "Matspar",
     "packSize": 250,
     "packUnit": "g",
-    "price": 10.95,
+    "price": 14.95,
     "category": "Frukt & Grönt",
     "ingredientKeys": [
       "gul_lok"
     ],
     "source": "matspar",
-    "url": "https://www.matspar.se/produkt/gullok-i-knippe-ca-250g"
+    "url": "https://www.matspar.se/produkt/lok-i-knippe-ca"
   },
   {
-    "id": "matspar-187184",
-    "name": "Rödlök",
-    "brand": "Matspar",
-    "packSize": 300,
+    "id": "matspar-140834",
+    "name": "Rödlök 500g",
+    "brand": "ICA",
+    "packSize": 500,
     "packUnit": "g",
-    "price": 16.99,
+    "price": 15.95,
     "category": "Frukt & Grönt",
     "ingredientKeys": [
       "rodlok"
     ],
     "source": "matspar",
-    "url": "https://www.matspar.se/produkt/rodlok-ca-300g-1"
+    "url": "https://www.matspar.se/produkt/rodlok-500g-ica"
   },
   {
     "id": "matspar-238043",
@@ -356,60 +356,60 @@ export const MATSPAR_PRODUCTS: Product[] = [
     "url": "https://www.matspar.se/produkt/vitlok-farsk-ca-60g"
   },
   {
-    "id": "matspar-164576",
-    "name": "Morötter",
-    "brand": "Matspar",
-    "packSize": 1000,
+    "id": "matspar-142306",
+    "name": "Morötter i Knippe",
+    "brand": "ICA",
+    "packSize": 433,
     "packUnit": "g",
-    "price": 16.9,
+    "price": 14.19,
     "category": "Frukt & Grönt",
     "ingredientKeys": [
       "morot"
     ],
     "source": "matspar",
-    "url": "https://www.matspar.se/produkt/morotter-1st-3"
+    "url": "https://www.matspar.se/produkt/morotter-i-knippe-ca-500g-ica"
   },
   {
-    "id": "matspar-302191",
-    "name": "Tomat Vildmix",
+    "id": "matspar-160579",
+    "name": "Tomatmix",
     "brand": "Matspar",
-    "packSize": 350,
+    "packSize": 250,
     "packUnit": "g",
-    "price": 27.95,
+    "price": 27.9,
     "category": "Frukt & Grönt",
     "ingredientKeys": [
       "tomat"
     ],
     "source": "matspar",
-    "url": "https://www.matspar.se/produkt/tomat-vildmix-ca-350g"
+    "url": "https://www.matspar.se/produkt/tomatmix-250g"
   },
   {
-    "id": "matspar-164010",
-    "name": "Gurka EKO KRAV",
-    "brand": "ICA I Love Eco",
-    "packSize": 300,
+    "id": "matspar-352062",
+    "name": "Snackgurka",
+    "brand": "Matspar",
+    "packSize": 250,
     "packUnit": "g",
-    "price": 20.95,
+    "price": 21.6,
     "category": "Frukt & Grönt",
     "ingredientKeys": [
       "gurka"
     ],
     "source": "matspar",
-    "url": "https://www.matspar.se/produkt/gurka-eko-krav-i-love-eco"
+    "url": "https://www.matspar.se/produkt/snackgurka-ca-250g"
   },
   {
-    "id": "matspar-176594",
-    "name": "Grillpaprika",
-    "brand": "ICA",
-    "packSize": 350,
-    "packUnit": "g",
-    "price": 20.95,
+    "id": "matspar-140256",
+    "name": "Spetspaprika",
+    "brand": "Matspar",
+    "packSize": 1,
+    "packUnit": "st",
+    "price": 24.27,
     "category": "Frukt & Grönt",
     "ingredientKeys": [
       "paprika"
     ],
     "source": "matspar",
-    "url": "https://www.matspar.se/produkt/grillpaprika-ca-ica"
+    "url": "https://www.matspar.se/produkt/plommon-sviskon-1st-frukt-gront"
   },
   {
     "id": "matspar-148996",
@@ -440,18 +440,18 @@ export const MATSPAR_PRODUCTS: Product[] = [
     "url": "https://www.matspar.se/produkt/limeeko80g-1st"
   },
   {
-    "id": "matspar-176558",
-    "name": "Isbergssallat EKO",
-    "brand": "ICA I Love Eco",
-    "packSize": 300,
+    "id": "matspar-176579",
+    "name": "Pak Choi",
+    "brand": "ICA",
+    "packSize": 250,
     "packUnit": "g",
-    "price": 21.67,
+    "price": 21.9,
     "category": "Frukt & Grönt",
     "ingredientKeys": [
       "isbergssallad"
     ],
     "source": "matspar",
-    "url": "https://www.matspar.se/produkt/isbergssallat-eko-ca-ica-i-love-ecco"
+    "url": "https://www.matspar.se/produkt/pak-choi-ca-ica"
   },
   {
     "id": "matspar-129161",
@@ -468,10 +468,10 @@ export const MATSPAR_PRODUCTS: Product[] = [
     "url": "https://www.matspar.se/produkt/salladsmix-150g-coop"
   },
   {
-    "id": "matspar-160625",
-    "name": "Babyspenat EKO",
+    "id": "matspar-233742",
+    "name": "Babyspenat",
     "brand": "Garant",
-    "packSize": 65,
+    "packSize": 175,
     "packUnit": "g",
     "price": 18.8,
     "category": "Frukt & Grönt",
@@ -479,21 +479,21 @@ export const MATSPAR_PRODUCTS: Product[] = [
       "spenat"
     ],
     "source": "matspar",
-    "url": "https://www.matspar.se/produkt/baby-spenat-65g-garant"
+    "url": "https://www.matspar.se/produkt/babyspenat-ca-175-garant"
   },
   {
-    "id": "matspar-189466",
-    "name": "Färskpotatis Estelle",
+    "id": "matspar-257386",
+    "name": "Potatis Fast",
     "brand": "Matspar",
-    "packSize": 900,
+    "packSize": 4000,
     "packUnit": "g",
-    "price": 23.5,
+    "price": 23.1,
     "category": "Frukt & Grönt",
     "ingredientKeys": [
       "potatis"
     ],
     "source": "matspar",
-    "url": "https://www.matspar.se/produkt/farskpotatis-estelle"
+    "url": "https://www.matspar.se/produkt/potatis-fast-ca-4kg"
   },
   {
     "id": "matspar-164573",
@@ -557,7 +557,7 @@ export const MATSPAR_PRODUCTS: Product[] = [
     "brand": "Matspar",
     "packSize": 125,
     "packUnit": "g",
-    "price": 16.95,
+    "price": 17.95,
     "category": "Frukt & Grönt",
     "ingredientKeys": [
       "salladslok"
@@ -566,22 +566,22 @@ export const MATSPAR_PRODUCTS: Product[] = [
     "url": "https://www.matspar.se/produkt/salladslok-125g"
   },
   {
-    "id": "matspar-16348",
-    "name": "Dill i kruka",
-    "brand": "Orto Novo",
+    "id": "matspar-153144",
+    "name": "Dill EKO",
+    "brand": "Svegro",
     "packSize": 1,
     "packUnit": "st",
-    "price": 18.88,
+    "price": 17.94,
     "category": "Frukt & Grönt",
     "ingredientKeys": [
       "dill"
     ],
     "source": "matspar",
-    "url": "https://www.matspar.se/produkt/dill-i-kruka-st-orto-novo"
+    "url": "https://www.matspar.se/produkt/ekologisk-dill-1h87-svegro"
   },
   {
-    "id": "matspar-176320",
-    "name": "Persiljeblad EKO KRAV",
+    "id": "matspar-176307",
+    "name": "Persilja EKO KRAV",
     "brand": "Änglamark",
     "packSize": 35,
     "packUnit": "g",
@@ -591,7 +591,7 @@ export const MATSPAR_PRODUCTS: Product[] = [
       "persilja"
     ],
     "source": "matspar",
-    "url": "https://www.matspar.se/produkt/persiljeblad-eko-krav-anglamark"
+    "url": "https://www.matspar.se/produkt/persilja-eko-krav-anglamark"
   },
   {
     "id": "matspar-211583",
@@ -734,18 +734,18 @@ export const MATSPAR_PRODUCTS: Product[] = [
     "url": "https://www.matspar.se/produkt/tomatpure-trippelkoncentrat-185g-mutti"
   },
   {
-    "id": "matspar-495065",
-    "name": "Kokosmjölk EKO KRAV",
-    "brand": "Kung Markatta",
-    "packSize": 200,
+    "id": "matspar-533478",
+    "name": "Kokosmjölk 18%",
+    "brand": "Spicefield",
+    "packSize": 400,
     "packUnit": "ml",
-    "price": 13.2,
+    "price": 13.9,
     "category": "Skafferi",
     "ingredientKeys": [
       "kokosmjolk"
     ],
     "source": "matspar",
-    "url": "https://www.matspar.se/produkt/kokosmjolk-2dl-kung-markatta"
+    "url": "https://www.matspar.se/produkt/kokosmjolk-18-4dl-spicefield-2"
   },
   {
     "id": "matspar-178626",
@@ -818,8 +818,8 @@ export const MATSPAR_PRODUCTS: Product[] = [
     "url": "https://www.matspar.se/produkt/soltorkade-tomater-i-balsamvinager-200g-garant"
   },
   {
-    "id": "matspar-173054",
-    "name": "Panang Curry Chicken Thai Cube",
+    "id": "matspar-227764",
+    "name": "Red Curry Chicken Thai Cube",
     "brand": "Kitchen Joy",
     "packSize": 350,
     "packUnit": "g",
@@ -829,21 +829,21 @@ export const MATSPAR_PRODUCTS: Product[] = [
       "rod_currypasta"
     ],
     "source": "matspar",
-    "url": "https://www.matspar.se/produkt/panang-curry-thai-cube-350g-kitchen-joy"
+    "url": "https://www.matspar.se/produkt/thai-cube-red-curry-350g-kitchen-joy-1"
   },
   {
-    "id": "matspar-160072",
-    "name": "Tacosås Hot",
-    "brand": "Santa Maria",
-    "packSize": 230,
+    "id": "matspar-11875",
+    "name": "Tacoskal 12-p",
+    "brand": "ICA",
+    "packSize": 135,
     "packUnit": "g",
-    "price": 14.95,
+    "price": 15.9,
     "category": "Skafferi",
     "ingredientKeys": [
       "tacokrydda"
     ],
     "source": "matspar",
-    "url": "https://www.matspar.se/produkt/taco-sauce-hot-230g-santa-maria"
+    "url": "https://www.matspar.se/produkt/tacoskal-12-st-135-g-ica"
   },
   {
     "id": "matspar-511039",
@@ -860,18 +860,18 @@ export const MATSPAR_PRODUCTS: Product[] = [
     "url": "https://www.matspar.se/produkt/rarorda-lingon-400g-felix"
   },
   {
-    "id": "matspar-257798",
-    "name": "Gordal Oliver Med Kärnor",
-    "brand": "ICA",
-    "packSize": 350,
+    "id": "matspar-357719",
+    "name": "Inläggningar",
+    "brand": "Ridderheims",
+    "packSize": 160,
     "packUnit": "g",
-    "price": 27.7,
+    "price": 28.2,
     "category": "Skafferi",
     "ingredientKeys": [
       "oliver"
     ],
     "source": "matspar",
-    "url": "https://www.matspar.se/produkt/gordal-oliver-350g-ica"
+    "url": "https://www.matspar.se/produkt/queenoliver-i-ortmarinad-160g-ridderheims-1"
   },
   {
     "id": "matspar-12375",
@@ -879,7 +879,7 @@ export const MATSPAR_PRODUCTS: Product[] = [
     "brand": "ICA Basic",
     "packSize": 450,
     "packUnit": "g",
-    "price": 17.91,
+    "price": 17.9,
     "category": "Bröd",
     "ingredientKeys": [
       "tortilla"
@@ -888,24 +888,24 @@ export const MATSPAR_PRODUCTS: Product[] = [
     "url": "https://www.matspar.se/produkt/tortillachips-ost-450-g-ica-basic"
   },
   {
-    "id": "matspar-4687",
+    "id": "matspar-5068",
     "name": "Hamburgerbröd 8-p",
-    "brand": "Pågen",
-    "packSize": 416,
+    "brand": "Korvbrödsbagarn",
+    "packSize": 448,
     "packUnit": "g",
-    "price": 26,
+    "price": 27.1,
     "category": "Bröd",
     "ingredientKeys": [
       "hamburgerbrod"
     ],
     "source": "matspar",
-    "url": "https://www.matspar.se/produkt/hamburgerbrod-416g-pagen"
+    "url": "https://www.matspar.se/produkt/hamburgerbrod-8-pack-448g-korvbrodsbagarn"
   },
   {
-    "id": "matspar-242815",
-    "name": "Pitabröd",
-    "brand": "ICA",
-    "packSize": 375,
+    "id": "matspar-155477",
+    "name": "Pitabröd 6-p",
+    "brand": "Eldorado",
+    "packSize": 480,
     "packUnit": "g",
     "price": 13.9,
     "category": "Bröd",
@@ -913,7 +913,7 @@ export const MATSPAR_PRODUCTS: Product[] = [
       "pitabrod"
     ],
     "source": "matspar",
-    "url": "https://www.matspar.se/produkt/pitabrod-375g-ica"
+    "url": "https://www.matspar.se/produkt/pitabrod-480g-eldorado"
   },
   {
     "id": "matspar-108808",
@@ -944,17 +944,269 @@ export const MATSPAR_PRODUCTS: Product[] = [
     "url": "https://www.matspar.se/produkt/grona-bonor-djupfryst-1kg-eldorado"
   },
   {
-    "id": "matspar-1709",
-    "name": "Mandeldryck Osötad",
-    "brand": "Alpro",
-    "packSize": 1000,
-    "packUnit": "ml",
-    "price": 21.6,
+    "id": "matspar-174858",
+    "name": "Vegan Bredbart EKO",
+    "brand": "Naturli'",
+    "packSize": 225,
+    "packUnit": "g",
+    "price": 23.25,
     "category": "Fryst",
     "ingredientKeys": [
       "falafel"
     ],
     "source": "matspar",
-    "url": "https://www.matspar.se/produkt/mandeldryck-osotad-1-liter-alpro-soja"
+    "url": "https://www.matspar.se/produkt/ekologisk-vegan-bredbart-225g-naturli"
+  },
+  {
+    "id": "matspar-179248",
+    "name": "Kycklingbuljong 12-p 6l",
+    "brand": "ICA",
+    "packSize": 132,
+    "packUnit": "g",
+    "price": 15.01,
+    "category": "Skafferi",
+    "ingredientKeys": [
+      "buljong"
+    ],
+    "source": "matspar",
+    "url": "https://www.matspar.se/produkt/kycklingbuljong-132g-ica"
+  },
+  {
+    "id": "matspar-201541",
+    "name": "Organic Chili Flakes",
+    "brand": "Santa Maria",
+    "packSize": 27,
+    "packUnit": "g",
+    "price": 29.81,
+    "category": "Skafferi",
+    "ingredientKeys": [
+      "chiliflakes"
+    ],
+    "source": "matspar",
+    "url": "https://www.matspar.se/produkt/organicchiliflakes27gsantamaria-1st"
+  },
+  {
+    "id": "matspar-202560",
+    "name": "Curry Mango",
+    "brand": "Santa Maria",
+    "packSize": 41,
+    "packUnit": "g",
+    "price": 30.75,
+    "category": "Skafferi",
+    "ingredientKeys": [
+      "currypulver"
+    ],
+    "source": "matspar",
+    "url": "https://www.matspar.se/produkt/currymango41gsantamaria-1st"
+  },
+  {
+    "id": "matspar-164998",
+    "name": "Garam Masala",
+    "brand": "Kockens",
+    "packSize": 43,
+    "packUnit": "g",
+    "price": 23.56,
+    "category": "Skafferi",
+    "ingredientKeys": [
+      "garam_masala"
+    ],
+    "source": "matspar",
+    "url": "https://www.matspar.se/produkt/garam-masala-43g-kockens"
+  },
+  {
+    "id": "matspar-189510",
+    "name": "Pastakrydda",
+    "brand": "Kockens",
+    "packSize": 46,
+    "packUnit": "g",
+    "price": 23.56,
+    "category": "Skafferi",
+    "ingredientKeys": [
+      "oregano"
+    ],
+    "source": "matspar",
+    "url": "https://www.matspar.se/produkt/pastakrydda-46g-kockens-1"
+  },
+  {
+    "id": "matspar-166810",
+    "name": "Paprika",
+    "brand": "Santa Maria",
+    "packSize": 70,
+    "packUnit": "g",
+    "price": 22.61,
+    "category": "Skafferi",
+    "ingredientKeys": [
+      "paprikapulver"
+    ],
+    "source": "matspar",
+    "url": "https://www.matspar.se/produkt/paprika-70g-santa-maria"
+  },
+  {
+    "id": "matspar-169468",
+    "name": "Spiskummin Malen Ekologisk",
+    "brand": "Kockens",
+    "packSize": 27,
+    "packUnit": "g",
+    "price": 28.29,
+    "category": "Skafferi",
+    "ingredientKeys": [
+      "spiskummin"
+    ],
+    "source": "matspar",
+    "url": "https://www.matspar.se/produkt/spiskummin-malen-ekologisk-27g-kockens"
+  },
+  {
+    "id": "matspar-166248",
+    "name": "Svartpeppar Grovmalen",
+    "brand": "Santa Maria",
+    "packSize": 65,
+    "packUnit": "g",
+    "price": 26.97,
+    "category": "Skafferi",
+    "ingredientKeys": [
+      "svartpeppar"
+    ],
+    "source": "matspar",
+    "url": "https://www.matspar.se/produkt/svartpeppar-65g-santa-maria"
+  },
+  {
+    "id": "matspar-204105",
+    "name": "Wasabi & Sesame",
+    "brand": "Santa Maria",
+    "packSize": 44,
+    "packUnit": "g",
+    "price": 27.94,
+    "category": "Skafferi",
+    "ingredientKeys": [
+      "sesamfron"
+    ],
+    "source": "matspar",
+    "url": "https://www.matspar.se/produkt/wasabi-sesame44gsantamaria"
+  },
+  {
+    "id": "matspar-17729",
+    "name": "Himalayasalt Grovkornigt",
+    "brand": "Falksalt",
+    "packSize": 500,
+    "packUnit": "g",
+    "price": 22.66,
+    "category": "Skafferi",
+    "ingredientKeys": [
+      "salt"
+    ],
+    "source": "matspar",
+    "url": "https://www.matspar.se/produkt/grovkornigt-himalayasalt-500g-falksalt"
+  },
+  {
+    "id": "matspar-507523",
+    "name": "Svensk Honung",
+    "brand": "Svensk Landskapshonung",
+    "packSize": 425,
+    "packUnit": "g",
+    "price": 59.5,
+    "category": "Skafferi",
+    "ingredientKeys": [
+      "honung"
+    ],
+    "source": "matspar",
+    "url": "https://www.matspar.se/produkt/svensk-honung-425g-svensk-landskapshonung"
+  },
+  {
+    "id": "matspar-575511",
+    "name": "Ketchup Jalapeño",
+    "brand": "Johnny's",
+    "packSize": 295,
+    "packUnit": "g",
+    "price": 28.35,
+    "category": "Skafferi",
+    "ingredientKeys": [
+      "ketchup"
+    ],
+    "source": "matspar",
+    "url": "https://www.matspar.se/produkt/ketchup-295g"
+  },
+  {
+    "id": "matspar-436293",
+    "name": "Majonnäs American Style",
+    "brand": "ICA",
+    "packSize": 385,
+    "packUnit": "g",
+    "price": 20.7,
+    "category": "Skafferi",
+    "ingredientKeys": [
+      "majonnas"
+    ],
+    "source": "matspar",
+    "url": "https://www.matspar.se/produkt/majonnas-american-style-385g-ica"
+  },
+  {
+    "id": "matspar-6986",
+    "name": "Olivolja Chili",
+    "brand": "Zeta",
+    "packSize": 250,
+    "packUnit": "ml",
+    "price": 75.61,
+    "category": "Skafferi",
+    "ingredientKeys": [
+      "olivolja"
+    ],
+    "source": "matspar",
+    "url": "https://www.matspar.se/produkt/olivolja-extra-vergine-chilivitlok-0-25-l-zeta"
+  },
+  {
+    "id": "matspar-22240",
+    "name": "Sesamolja",
+    "brand": "ICA Asia",
+    "packSize": 700,
+    "packUnit": "ml",
+    "price": 113.51,
+    "category": "Skafferi",
+    "ingredientKeys": [
+      "sesamolja"
+    ],
+    "source": "matspar",
+    "url": "https://www.matspar.se/produkt/sesamolja-7dl-ica-asia"
+  },
+  {
+    "id": "matspar-8241",
+    "name": "Soyasås",
+    "brand": "Kikkoman",
+    "packSize": 150,
+    "packUnit": "ml",
+    "price": 30.6,
+    "category": "Skafferi",
+    "ingredientKeys": [
+      "soja"
+    ],
+    "source": "matspar",
+    "url": "https://www.matspar.se/produkt/soja-150-ml-kikkoman"
+  },
+  {
+    "id": "matspar-23541",
+    "name": "Vetemjöl Manitoba Cream",
+    "brand": "Finax",
+    "packSize": 2000,
+    "packUnit": "g",
+    "price": 25.4,
+    "category": "Skafferi",
+    "ingredientKeys": [
+      "vetemjol"
+    ],
+    "source": "matspar",
+    "url": "https://www.matspar.se/produkt/vetemjol-manitoba-cream-2kg-finax"
+  },
+  {
+    "id": "matspar-208",
+    "name": "Soyasås Äkta Kinesisk Mushroom",
+    "brand": "Pearl River Bridge",
+    "packSize": 500,
+    "packUnit": "ml",
+    "price": 26.7,
+    "category": "Skafferi",
+    "ingredientKeys": [
+      "fisksas"
+    ],
+    "source": "matspar",
+    "url": "https://www.matspar.se/produkt/soya-mushroom-500ml-pearl-river-bridge"
   }
 ];

@@ -85,6 +85,26 @@ const CATEGORY_MAP = {
   brod: "bageribrod",
   haricots_verts: "gronsaker",
   falafel: "vegetariska-produkter",
+
+  // Skafferivaror – hämtas så att de kan läggas till i varukorgen vid behov.
+  buljong: "buljong",
+  chiliflakes: "kryddor",
+  currypulver: "kryddor",
+  garam_masala: "kryddor",
+  oregano: "kryddor",
+  paprikapulver: "kryddor",
+  spiskummin: "kryddor",
+  svartpeppar: "kryddor",
+  sesamfron: "kryddor",
+  salt: "salt",
+  honung: "socker-sirap-honung",
+  ketchup: "ketchup-senap",
+  majonnas: "dressing-bearnaise-majonnas",
+  olivolja: "olivolja",
+  sesamolja: "ovrig-olja",
+  soja: "soja",
+  vetemjol: "mjol-gryn",
+  fisksas: "asien",
 };
 
 /**
@@ -109,6 +129,21 @@ const NAME_MUST_INCLUDE = {
   falafel: ["falafel"],
   lingonsylt: ["lingon"],
   parmesan: ["parmesan"],
+  // Skafferivaror – matchas exakt på namn i sina (breda) kryddkategorier.
+  chiliflakes: ["chili"],
+  currypulver: ["curry"],
+  garam_masala: ["garam"],
+  oregano: ["oregano"],
+  paprikapulver: ["paprikapulver", "paprika"],
+  spiskummin: ["spiskummin"],
+  svartpeppar: ["svartpeppar"],
+  sesamfron: ["sesam"],
+  honung: ["honung"],
+  ketchup: ["ketchup"],
+  majonnas: ["majonnäs"],
+  sesamolja: ["sesam"],
+  vetemjol: ["vetemjöl"],
+  fisksas: ["fisksås", "fish sauce"],
 };
 
 /** Produktnamn som alltid utesluts för dessa ingredienser (köttprodukter -> inga veganalternativ). */
@@ -302,6 +337,24 @@ async function main() {
     brod: "Bröd",
     haricots_verts: "Fryst",
     falafel: "Fryst",
+    buljong: "Skafferi",
+    chiliflakes: "Skafferi",
+    currypulver: "Skafferi",
+    garam_masala: "Skafferi",
+    oregano: "Skafferi",
+    paprikapulver: "Skafferi",
+    spiskummin: "Skafferi",
+    svartpeppar: "Skafferi",
+    sesamfron: "Skafferi",
+    salt: "Skafferi",
+    honung: "Skafferi",
+    ketchup: "Skafferi",
+    majonnas: "Skafferi",
+    olivolja: "Skafferi",
+    sesamolja: "Skafferi",
+    soja: "Skafferi",
+    vetemjol: "Skafferi",
+    fisksas: "Skafferi",
   };
 
   const header = `// Genererad av scripts/fetch-matspar.mjs – kör om skriptet för att uppdatera priserna.

@@ -8,6 +8,7 @@ import type { Recipe } from "@/lib/types";
 export const RECIPES: Recipe[] = [
   {
     id: "korvstroganoff",
+    image: "/recipes/korvstroganoff.jpg",
     title: "Korvstroganoff med ris",
     description: "Krämig klassiker med falukorv, tomat och grädde – barnens favorit.",
     time: 25,
@@ -33,6 +34,7 @@ export const RECIPES: Recipe[] = [
   },
   {
     id: "tacos",
+    image: "/recipes/tacos.jpg",
     title: "Tacos fredagsstyle",
     description: "Krispiga grönsaker, kryddig färs och massor av ost i mjuka tortillas.",
     time: 30,
@@ -59,6 +61,7 @@ export const RECIPES: Recipe[] = [
   },
   {
     id: "bolognese",
+    image: "/recipes/bolognese.jpg",
     title: "Spaghetti bolognese",
     description: "Långsjuden köttfärssås med morot och vitlök, toppad med parmesan.",
     time: 35,
@@ -87,6 +90,7 @@ export const RECIPES: Recipe[] = [
   },
   {
     id: "kycklingcurry",
+    image: "/recipes/kycklingcurry.jpg",
     title: "Kycklingcurry med kokosmjölk",
     description: "Mild och krämig curry med paprika – snabb vardagsräddare.",
     time: 30,
@@ -112,6 +116,7 @@ export const RECIPES: Recipe[] = [
   },
   {
     id: "laxpasta",
+    image: "/recipes/laxpasta.jpg",
     title: "Krämig laxpasta med spenat",
     description: "Penne i citrondoftande gräddsås med stekt lax och babyspenat.",
     time: 25,
@@ -136,6 +141,7 @@ export const RECIPES: Recipe[] = [
   },
   {
     id: "pannkakor",
+    image: "/recipes/pannkakor.jpg",
     title: "Pannkakor med sylt",
     description: "Tunna svenska pannkakor med lingonsylt – klassisk kvällsfavorit.",
     time: 30,
@@ -159,58 +165,8 @@ export const RECIPES: Recipe[] = [
     ],
   },
   {
-    id: "falukorv-ugn",
-    title: "Ugnsbakad falukorv med potatismos",
-    description: "Falukorv gratinerad med ost och tomat, serverad med hemgjort mos.",
-    time: 40,
-    tags: ["Klassiker", "Barnvänlig"],
-    emoji: "🧀",
-    gradient: ["#f87171", "#b91c1c"],
-    ingredients: [
-      { key: "falukorv", name: "Falukorv", amount: 800, unit: "g" },
-      { key: "riven_ost", name: "Riven ost", amount: 100, unit: "g" },
-      { key: "tomatpure", name: "Tomatpuré", amount: 50, unit: "ml" },
-      { key: "gul_lok", name: "Gul lök", amount: 1, unit: "st" },
-      { key: "potatis", name: "Potatis", amount: 800, unit: "g" },
-      { key: "mjolk", name: "Mjölk", amount: 200, unit: "ml" },
-      { key: "smor", name: "Smör", amount: 50, unit: "g", pantry: true },
-      { key: "senap", name: "Senap", amount: 15, unit: "ml", pantry: true },
-    ],
-    steps: [
-      "Sätt ugnen på 225°. Skala och koka potatisen.",
-      "Snitta falukorven och lägg i ugnsform. Bred tomatpuré i snitten.",
-      "Toppa med lökringar och riven ost. Gratinera 15–20 minuter.",
-      "Mosa potatisen med mjölk, smör och senap. Smaka av med salt.",
-      "Servera korven med moset.",
-    ],
-  },
-  {
-    id: "kottbullar",
-    title: "Köttbullar med gräddsås",
-    description: "Köttbullar, potatismos, gräddsås och lingon – som hos mormor.",
-    time: 35,
-    tags: ["Klassiker", "Barnvänlig"],
-    emoji: "🧆",
-    gradient: ["#a16207", "#713f12"],
-    ingredients: [
-      { key: "kottbullar", name: "Köttbullar", amount: 500, unit: "g" },
-      { key: "potatis", name: "Potatis", amount: 800, unit: "g" },
-      { key: "mjolk", name: "Mjölk", amount: 200, unit: "ml" },
-      { key: "matlagningsgradde", name: "Matlagningsgrädde", amount: 250, unit: "ml" },
-      { key: "lingonsylt", name: "Lingonsylt", amount: 100, unit: "g" },
-      { key: "soja", name: "Kinesisk soja", amount: 15, unit: "ml", pantry: true },
-      { key: "buljong", name: "Köttbuljongtärning", amount: 1, unit: "st", pantry: true },
-      { key: "smor", name: "Smör", amount: 50, unit: "g", pantry: true },
-    ],
-    steps: [
-      "Skala och koka potatisen, mosa med mjölk och smör.",
-      "Stek köttbullarna enligt förpackningen.",
-      "Koka upp grädde, buljong och soja, red av till en blank sås.",
-      "Servera köttbullarna med mos, sås och lingonsylt.",
-    ],
-  },
-  {
     id: "fajitas",
+    image: "/recipes/fajitas.jpg",
     title: "Kycklingfajitas",
     description: "Strimlad kyckling och paprika i het panna, rullas i varma tortillas.",
     time: 30,
@@ -235,6 +191,7 @@ export const RECIPES: Recipe[] = [
   },
   {
     id: "carbonara",
+    image: "/recipes/carbonara.jpg",
     title: "Pasta carbonara",
     description: "Äkta italiensk carbonara med bacon, ägg och parmesan – utan grädde.",
     time: 20,
@@ -258,6 +215,7 @@ export const RECIPES: Recipe[] = [
   },
   {
     id: "fiskgratang",
+    image: "/recipes/fiskgratang.jpg",
     title: "Fiskgratäng med dill och citron",
     description: "Torsk i krämig dillsås gratinerad med ost, serveras med kokt potatis.",
     time: 45,
@@ -282,6 +240,7 @@ export const RECIPES: Recipe[] = [
   },
   {
     id: "chili-con-carne",
+    image: "/recipes/chili-con-carne.jpg",
     title: "Chili con carne",
     description: "Mustig gryta med färs, kidneybönor och spiskummin. Serveras med ris.",
     time: 40,
@@ -310,6 +269,7 @@ export const RECIPES: Recipe[] = [
   },
   {
     id: "halloumiburgare",
+    image: "/recipes/halloumiburgare.jpg",
     title: "Halloumiburgare med klyftpotatis",
     description: "Stekt halloumi i briochebröd med krispig sallad och rostad potatis.",
     time: 40,
@@ -334,6 +294,7 @@ export const RECIPES: Recipe[] = [
   },
   {
     id: "kycklingpasta-soltorkad",
+    image: "/recipes/kycklingpasta-soltorkad.jpg",
     title: "Krämig kycklingpasta med soltorkade tomater",
     description: "Restaurangkänsla på 25 minuter – kyckling, spenat och parmesan.",
     time: 25,
@@ -358,6 +319,7 @@ export const RECIPES: Recipe[] = [
   },
   {
     id: "ugnslax",
+    image: "/recipes/ugnslax.jpg",
     title: "Ugnsbakad lax med citron",
     description: "Lax i ugn med citron och dill, kokt potatis och haricots verts.",
     time: 35,
@@ -381,32 +343,8 @@ export const RECIPES: Recipe[] = [
     ],
   },
   {
-    id: "linsbolognese",
-    title: "Linsbolognese",
-    description: "Vegetarisk bolognese på röda linser – mustig, billig och snabb.",
-    time: 30,
-    tags: ["Vegetariskt", "Matlåda"],
-    emoji: "🫘",
-    gradient: ["#f97316", "#9a3412"],
-    ingredients: [
-      { key: "roda_linser", name: "Röda linser", amount: 200, unit: "g" },
-      { key: "krossade_tomater", name: "Krossade tomater", amount: 800, unit: "g" },
-      { key: "morot", name: "Morot", amount: 2, unit: "st" },
-      { key: "gul_lok", name: "Gul lök", amount: 1, unit: "st" },
-      { key: "vitlok", name: "Vitlök, klyftor", amount: 2, unit: "st" },
-      { key: "spaghetti", name: "Spaghetti", amount: 400, unit: "g" },
-      { key: "buljong", name: "Grönsaksbuljongtärning", amount: 1, unit: "st", pantry: true },
-      { key: "oregano", name: "Oregano", amount: 5, unit: "ml", pantry: true },
-    ],
-    steps: [
-      "Fräs hackad lök, vitlök och riven morot i olja.",
-      "Tillsätt sköljda linser, krossade tomater, buljong och oregano.",
-      "Sjud 15 minuter tills linserna är mjuka.",
-      "Koka spaghettin och servera med såsen.",
-    ],
-  },
-  {
     id: "tikka-masala",
+    image: "/recipes/tikka-masala.jpg",
     title: "Kyckling tikka masala",
     description: "Kryddig indisk gryta med tomat och grädde, serveras med ris.",
     time: 35,
@@ -434,6 +372,7 @@ export const RECIPES: Recipe[] = [
   },
   {
     id: "pytt-i-panna",
+    image: "/recipes/pytt-i-panna.jpg",
     title: "Pytt i panna med stekt ägg",
     description: "Klassisk pytt på potatis, falukorv och lök med rödbetor och stekt ägg.",
     time: 35,
@@ -457,6 +396,7 @@ export const RECIPES: Recipe[] = [
   },
   {
     id: "rakpasta",
+    image: "/recipes/rakpasta.jpg",
     title: "Räkpasta med vitlök och chili",
     description: "Snabb pasta med räkor, vitlök, chiliflakes och citron.",
     time: 20,
@@ -481,6 +421,7 @@ export const RECIPES: Recipe[] = [
   },
   {
     id: "hamburgare",
+    image: "/recipes/hamburgare.jpg",
     title: "Hemmagjorda hamburgare",
     description: "Saftiga burgare med cheddar och klyftpotatis – bättre än gatuköket.",
     time: 40,
@@ -506,6 +447,7 @@ export const RECIPES: Recipe[] = [
   },
   {
     id: "thaigryta",
+    image: "/recipes/thaigryta.jpg",
     title: "Röd thaigryta med kyckling",
     description: "Het kokosgryta med röd curry, sockerärtor och lime.",
     time: 30,
@@ -532,6 +474,7 @@ export const RECIPES: Recipe[] = [
   },
   {
     id: "tomatsoppa",
+    image: "/recipes/tomatsoppa.jpg",
     title: "Tomatsoppa med grilled cheese",
     description: "Krämig tomatsoppa med basilika och frasiga varma ostmackor.",
     time: 30,
@@ -559,6 +502,7 @@ export const RECIPES: Recipe[] = [
   },
   {
     id: "kycklingsallad",
+    image: "/recipes/kycklingsallad.jpg",
     title: "Kycklingsallad med fetaost",
     description: "Fräsch sallad med stekt kyckling, feta och krutonger.",
     time: 25,
@@ -584,6 +528,7 @@ export const RECIPES: Recipe[] = [
   },
   {
     id: "wok-nudlar",
+    image: "/recipes/wok-nudlar.jpg",
     title: "Wokade nudlar med fläskfärs",
     description: "Snabb asiatisk wok med nudlar, ingefära, vitlök och salladslök.",
     time: 25,
@@ -609,31 +554,8 @@ export const RECIPES: Recipe[] = [
     ],
   },
   {
-    id: "gnocchi-tomat",
-    title: "Gnocchi i tomatsås med mozzarella",
-    description: "Gratinerad gnocchi i basilikadoftande tomatsås med smält mozzarella.",
-    time: 30,
-    tags: ["Vegetariskt", "Mysigt"],
-    emoji: "🇮🇹",
-    gradient: ["#22c55e", "#dc2626"],
-    ingredients: [
-      { key: "gnocchi", name: "Gnocchi", amount: 1000, unit: "g" },
-      { key: "krossade_tomater", name: "Krossade tomater", amount: 400, unit: "g" },
-      { key: "mozzarella", name: "Mozzarella", amount: 250, unit: "g" },
-      { key: "vitlok", name: "Vitlök, klyftor", amount: 2, unit: "st" },
-      { key: "basilika", name: "Färsk basilika", amount: 1, unit: "st" },
-      { key: "oregano", name: "Oregano", amount: 5, unit: "ml", pantry: true },
-    ],
-    steps: [
-      "Sätt ugnen på 225°. Fräs vitlöken i olja.",
-      "Tillsätt krossade tomater och oregano, sjud 10 minuter.",
-      "Vänd ner gnocchin i såsen och häll i ugnsform.",
-      "Toppa med riven mozzarella och gratinera 15 minuter.",
-      "Strö över basilika före servering.",
-    ],
-  },
-  {
     id: "kasslergratang",
+    image: "/recipes/kasslergratang.jpg",
     title: "Kasslergratäng med pasta",
     description: "Krämig pastagratäng med rökig kassler, paprika och ost.",
     time: 40,
@@ -657,6 +579,7 @@ export const RECIPES: Recipe[] = [
   },
   {
     id: "quesadillas",
+    image: "/recipes/quesadillas.jpg",
     title: "Quesadillas med kyckling",
     description: "Frasiga tortillas fyllda med kyckling, ost och paprika.",
     time: 30,
@@ -682,6 +605,7 @@ export const RECIPES: Recipe[] = [
   },
   {
     id: "teriyakilax",
+    image: "/recipes/teriyakilax.jpg",
     title: "Teriyakilax med ris och broccoli",
     description: "Glaserad lax med sojasötma, ångad broccoli och jasminris.",
     time: 30,
@@ -707,6 +631,7 @@ export const RECIPES: Recipe[] = [
   },
   {
     id: "svamprisotto",
+    image: "/recipes/svamprisotto.jpg",
     title: "Krämig svamprisotto",
     description: "Klassisk risotto med champinjoner, parmesan och persilja.",
     time: 40,
@@ -733,6 +658,7 @@ export const RECIPES: Recipe[] = [
   },
   {
     id: "falafel-pita",
+    image: "/recipes/falafel-pita.jpg",
     title: "Falafel i pita med vitlökssås",
     description: "Krispig falafel i pitabröd med grönsaker och yoghurtsås.",
     time: 25,

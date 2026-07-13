@@ -36,9 +36,6 @@ export default function RootLayout({
               <span aria-hidden>🥕</span> Matkassen
             </Link>
             <nav className="flex items-center gap-4 text-sm font-medium">
-              <Link href="/" className="text-stone-600 hover:text-stone-900">
-                Veckans förslag
-              </Link>
               <Link
                 href="/varukorg"
                 className="rounded-full bg-emerald-600 px-4 py-1.5 text-white hover:bg-emerald-700"

@@ -104,7 +104,7 @@ export default function RecipePicker() {
 
   if (!shown) {
     return (
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
         {Array.from({ length: SLOTS }).map((_, i) => (
           <div key={i} className="h-72 animate-pulse rounded-2xl bg-stone-200" />
         ))}
@@ -116,7 +116,7 @@ export default function RecipePicker() {
 
   return (
     <div className="space-y-6 pb-24">
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
         {recipes.map((recipe, slot) => (
           <RecipeCard
             key={`${slot}-${recipe.id}`}
