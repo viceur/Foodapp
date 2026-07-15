@@ -45,6 +45,10 @@ export interface Product {
   source: "mock" | "matspar";
   /** Länk till produkten på matspar.se, om tillgänglig */
   url?: string;
+  /** Svenskt ursprung enligt Matspars flaggor */
+  swedish?: boolean;
+  /** Antal butiker som lagerför produkten (bred tillgänglighet = fungerar oavsett butik) */
+  stores?: number;
 }
 
 /** En rad i varukorgen: en ingrediens matchad mot en produkt */

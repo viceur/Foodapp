@@ -350,7 +350,7 @@ export default function CartView() {
             </div>
             <p className="mt-2 text-xs text-stone-400">
               {cart.provider === "matspar"
-                ? "Riktiga produkter & priser från matspar.se (uppdateras med jämna mellanrum, inte live)."
+                ? "Produkter från matspar.se, valda för brett utbud (finns i de flesta butiker), lågt pris och svenskt ursprung 🇸🇪. Priser uppdateras med jämna mellanrum, inte live."
                 : "Priser från inbyggd demokatalog."}
             </p>
           </section>
@@ -395,6 +395,11 @@ function CartSection({ title, lines, onQty, onRemoveLine, onRemove, showSharedNo
                     </a>
                   ) : (
                     line.name
+                  )}
+                  {line.product?.swedish && (
+                    <span className="ml-1 align-middle" title="Svenskt ursprung">
+                      🇸🇪
+                    </span>
                   )}
                   {line.isPantry && <span className="ml-1 text-xs text-amber-600">(skafferi)</span>}
                 </p>
